@@ -479,7 +479,7 @@ local function project_delete()
           return
         end
         list = vim.list_slice(list, count + 1)
-        local str = string.dump(assert(loadstring('return ' .. vim.inspect(list))))
+        local str = 'return ' .. vim.inspect(list)
         local handle = io.open(path, 'w+')
         if not handle then
           return
