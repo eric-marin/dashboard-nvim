@@ -478,7 +478,7 @@ local function project_delete()
         if vim.tbl_count(list) < count then
           return
         end
-        table.remove(list, count)
+        table.remove(list, count+1)
         -- list = vim.list_slice(list, count + 1)
         local str = 'return ' .. vim.inspect(list)
         local handle = io.open(path, 'w+')
