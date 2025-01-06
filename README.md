@@ -52,6 +52,7 @@ use {
 theme = 'hyper' --  theme is doom and hyper default is hyper
 disable_move    --  default is false disable move keymap for hyper
 shortcut_type   --  shorcut type 'letter' or 'number'
+shuffle_letter  --  default is true, shortcut 'letter' will be randomize, set to false to have ordered letter.
 change_to_vcs_root -- default is false,for open file in hyper mru. it will change to the root of vcs
 config = {},    --  config used for theme
 hide = {
@@ -98,7 +99,7 @@ config = {
   -- action can be a functino type, e.g.
   -- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
   project = { enable = true, limit = 8, icon = 'your icon', label = '', action = 'Telescope find_files cwd=' },
-  mru = { limit = 10, icon = 'your icon', label = '', cwd_only = false },
+  mru = { enable = true, limit = 10, icon = 'your icon', label = '', cwd_only = false },
   footer = {}, -- footer
 }
 ```
